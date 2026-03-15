@@ -1,0 +1,454 @@
+{
+  "models": [
+    {
+      "name": "llama3.3",
+      "description": "Meta's latest Llama 3.3 model with improved multilingual and reasoning capabilities.",
+      "categories": ["chat"],
+      "tags": ["70b", "70b-instruct-q4_K_M", "70b-instruct-q8_0"],
+      "default_tag": "70b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/llama3.3"
+    },
+    {
+      "name": "llama3.2",
+      "description": "Meta's Llama 3.2 lightweight models optimized for edge and mobile devices.",
+      "categories": ["chat"],
+      "tags": ["1b", "3b", "1b-instruct-q4_K_M", "3b-instruct-q4_K_M"],
+      "default_tag": "3b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/llama3.2"
+    },
+    {
+      "name": "llama3.2-vision",
+      "description": "Meta's Llama 3.2 Vision models with image understanding capabilities.",
+      "categories": ["chat", "vision"],
+      "tags": ["11b", "90b", "11b-instruct-q4_K_M"],
+      "default_tag": "11b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/llama3.2-vision"
+    },
+    {
+      "name": "llama3.1",
+      "description": "Meta's Llama 3.1 model available in multiple sizes with strong general performance.",
+      "categories": ["chat"],
+      "tags": ["8b", "70b", "405b", "8b-instruct-q4_K_M", "70b-instruct-q4_K_M"],
+      "default_tag": "8b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/llama3.1"
+    },
+    {
+      "name": "qwen3",
+      "description": "Alibaba's Qwen3 model family with strong multilingual and reasoning capabilities.",
+      "categories": ["chat"],
+      "tags": ["0.6b", "1.7b", "4b", "8b", "14b", "32b"],
+      "default_tag": "8b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/qwen3"
+    },
+    {
+      "name": "qwen2.5",
+      "description": "Alibaba's Qwen 2.5 with improved knowledge, coding, and math performance.",
+      "categories": ["chat"],
+      "tags": ["0.5b", "1.5b", "3b", "7b", "14b", "32b", "72b"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/qwen2.5"
+    },
+    {
+      "name": "qwen2.5-coder",
+      "description": "Qwen 2.5 specialized for code generation, completion, and reasoning.",
+      "categories": ["code"],
+      "tags": ["0.5b", "1.5b", "3b", "7b", "14b", "32b"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/qwen2.5-coder"
+    },
+    {
+      "name": "gemma3",
+      "description": "Google's Gemma 3 lightweight open model with strong multilingual and multimodal support.",
+      "categories": ["chat", "vision"],
+      "tags": ["1b", "4b", "12b", "27b"],
+      "default_tag": "4b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/gemma3"
+    },
+    {
+      "name": "gemma2",
+      "description": "Google's Gemma 2 model with efficient architecture and strong benchmark results.",
+      "categories": ["chat"],
+      "tags": ["2b", "9b", "27b"],
+      "default_tag": "9b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/gemma2"
+    },
+    {
+      "name": "phi4",
+      "description": "Microsoft's Phi-4 small language model with strong reasoning capabilities.",
+      "categories": ["chat"],
+      "tags": ["14b", "14b-q4_K_M"],
+      "default_tag": "14b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/phi4"
+    },
+    {
+      "name": "phi3",
+      "description": "Microsoft's Phi-3 compact model with strong performance for its size.",
+      "categories": ["chat"],
+      "tags": ["3.8b", "14b", "3.8b-mini-4k-instruct-q4_K_M"],
+      "default_tag": "3.8b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/phi3"
+    },
+    {
+      "name": "mistral",
+      "description": "Mistral AI's 7B model with strong general-purpose performance and efficiency.",
+      "categories": ["chat"],
+      "tags": ["7b", "7b-instruct-q4_K_M", "7b-instruct-v0.3"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/mistral"
+    },
+    {
+      "name": "mixtral",
+      "description": "Mistral AI's mixture-of-experts model combining efficiency with high quality.",
+      "categories": ["chat"],
+      "tags": ["8x7b", "8x22b", "8x7b-instruct-v0.1-q4_K_M"],
+      "default_tag": "8x7b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/mixtral"
+    },
+    {
+      "name": "deepseek-r1",
+      "description": "DeepSeek's reasoning model with chain-of-thought capabilities for complex problem solving.",
+      "categories": ["chat"],
+      "tags": ["1.5b", "7b", "8b", "14b", "32b", "70b", "671b"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/deepseek-r1"
+    },
+    {
+      "name": "deepseek-coder-v2",
+      "description": "DeepSeek's code-specialized model with strong programming capabilities.",
+      "categories": ["code"],
+      "tags": ["16b", "236b", "16b-lite-instruct-q4_K_M"],
+      "default_tag": "16b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/deepseek-coder-v2"
+    },
+    {
+      "name": "codellama",
+      "description": "Meta's code-specialized Llama model for code generation and understanding.",
+      "categories": ["code"],
+      "tags": ["7b", "13b", "34b", "70b", "7b-code", "7b-instruct", "7b-python"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/codellama"
+    },
+    {
+      "name": "starcoder2",
+      "description": "BigCode's StarCoder2 model trained on a large code corpus for code generation.",
+      "categories": ["code"],
+      "tags": ["3b", "7b", "15b"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/starcoder2"
+    },
+    {
+      "name": "codegemma",
+      "description": "Google's code-specialized Gemma model for code completion and generation.",
+      "categories": ["code"],
+      "tags": ["2b", "7b", "7b-code", "7b-instruct"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/codegemma"
+    },
+    {
+      "name": "granite-code",
+      "description": "IBM's Granite Code model for enterprise code generation and understanding.",
+      "categories": ["code"],
+      "tags": ["3b", "8b", "20b", "34b"],
+      "default_tag": "8b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/granite-code"
+    },
+    {
+      "name": "stable-code",
+      "description": "Stability AI's code model for code completion and generation tasks.",
+      "categories": ["code"],
+      "tags": ["3b", "3b-code"],
+      "default_tag": "3b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/stable-code"
+    },
+    {
+      "name": "command-r",
+      "description": "Cohere's Command R model optimized for retrieval-augmented generation and tool use.",
+      "categories": ["chat"],
+      "tags": ["35b", "35b-v01-q4_K_M"],
+      "default_tag": "35b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/command-r"
+    },
+    {
+      "name": "aya",
+      "description": "Cohere's Aya model supporting over 100 languages for multilingual tasks.",
+      "categories": ["chat"],
+      "tags": ["8b", "35b"],
+      "default_tag": "8b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/aya"
+    },
+    {
+      "name": "yi",
+      "description": "01.AI's Yi model with strong bilingual English-Chinese capabilities.",
+      "categories": ["chat"],
+      "tags": ["6b", "9b", "34b"],
+      "default_tag": "9b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/yi"
+    },
+    {
+      "name": "solar",
+      "description": "Upstage's Solar model with strong instruction-following and reasoning.",
+      "categories": ["chat"],
+      "tags": ["10.7b", "10.7b-instruct-v1.0-q4_K_M"],
+      "default_tag": "10.7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/solar"
+    },
+    {
+      "name": "vicuna",
+      "description": "Fine-tuned LLaMA model trained on user-shared conversations from ShareGPT.",
+      "categories": ["chat"],
+      "tags": ["7b", "13b", "33b", "7b-v1.5-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/vicuna"
+    },
+    {
+      "name": "tinyllama",
+      "description": "A compact 1.1B parameter model ideal for resource-constrained environments.",
+      "categories": ["chat"],
+      "tags": ["1.1b", "1.1b-chat-v1.0-q4_K_M"],
+      "default_tag": "1.1b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/tinyllama"
+    },
+    {
+      "name": "orca-mini",
+      "description": "Small model fine-tuned on explanation-based datasets for improved reasoning.",
+      "categories": ["chat"],
+      "tags": ["3b", "7b", "13b", "70b"],
+      "default_tag": "3b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/orca-mini"
+    },
+    {
+      "name": "neural-chat",
+      "description": "Intel's neural-chat model fine-tuned for conversational AI tasks.",
+      "categories": ["chat"],
+      "tags": ["7b", "7b-v3.3-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/neural-chat"
+    },
+    {
+      "name": "starling-lm",
+      "description": "Berkeley's Starling model trained with RLHF for helpful and harmless responses.",
+      "categories": ["chat"],
+      "tags": ["7b", "7b-alpha-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/starling-lm"
+    },
+    {
+      "name": "openchat",
+      "description": "Open-source chat model with strong performance using mixed-quality training data.",
+      "categories": ["chat"],
+      "tags": ["7b", "7b-v3.5-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/openchat"
+    },
+    {
+      "name": "zephyr",
+      "description": "HuggingFace's Zephyr model fine-tuned with DPO for improved alignment.",
+      "categories": ["chat"],
+      "tags": ["7b", "7b-beta-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/zephyr"
+    },
+    {
+      "name": "llava",
+      "description": "Large Language and Vision Assistant for multimodal image understanding.",
+      "categories": ["chat", "vision"],
+      "tags": ["7b", "13b", "34b", "7b-v1.6-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/llava"
+    },
+    {
+      "name": "bakllava",
+      "description": "BakLLaVA multimodal model based on Mistral for visual question answering.",
+      "categories": ["chat", "vision"],
+      "tags": ["7b", "7b-v1-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/bakllava"
+    },
+    {
+      "name": "moondream",
+      "description": "Tiny but capable vision-language model optimized for edge deployment.",
+      "categories": ["chat", "vision"],
+      "tags": ["1.8b", "1.8b-v2-q4_K_M"],
+      "default_tag": "1.8b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/moondream"
+    },
+    {
+      "name": "nomic-embed-text",
+      "description": "Nomic AI's text embedding model with strong retrieval performance.",
+      "categories": ["embedding"],
+      "tags": ["v1.5", "v1", "latest"],
+      "default_tag": "latest",
+      "size_category": "small",
+      "url": "https://ollama.com/library/nomic-embed-text"
+    },
+    {
+      "name": "mxbai-embed-large",
+      "description": "Mixedbread AI's large embedding model for high-quality text representations.",
+      "categories": ["embedding"],
+      "tags": ["335m", "latest"],
+      "default_tag": "latest",
+      "size_category": "small",
+      "url": "https://ollama.com/library/mxbai-embed-large"
+    },
+    {
+      "name": "all-minilm",
+      "description": "Compact sentence transformer model for efficient text embeddings.",
+      "categories": ["embedding"],
+      "tags": ["22m", "33m", "l6-v2", "latest"],
+      "default_tag": "latest",
+      "size_category": "small",
+      "url": "https://ollama.com/library/all-minilm"
+    },
+    {
+      "name": "snowflake-arctic-embed",
+      "description": "Snowflake's Arctic embedding model optimized for retrieval tasks.",
+      "categories": ["embedding"],
+      "tags": ["22m", "33m", "110m", "137m", "335m", "latest"],
+      "default_tag": "latest",
+      "size_category": "small",
+      "url": "https://ollama.com/library/snowflake-arctic-embed"
+    },
+    {
+      "name": "mistral-small",
+      "description": "Mistral AI's efficient small model balancing performance and resource usage.",
+      "categories": ["chat"],
+      "tags": ["22b", "22b-instruct-2501-q4_K_M"],
+      "default_tag": "22b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/mistral-small"
+    },
+    {
+      "name": "mistral-nemo",
+      "description": "Mistral and NVIDIA's 12B model with strong multilingual and code capabilities.",
+      "categories": ["chat"],
+      "tags": ["12b", "12b-instruct-2407-q4_K_M"],
+      "default_tag": "12b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/mistral-nemo"
+    },
+    {
+      "name": "dolphin-mixtral",
+      "description": "Uncensored Dolphin fine-tune of Mixtral for unrestricted conversations.",
+      "categories": ["chat"],
+      "tags": ["8x7b", "8x22b", "8x7b-v2.5-q4_K_M"],
+      "default_tag": "8x7b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/dolphin-mixtral"
+    },
+    {
+      "name": "nous-hermes2",
+      "description": "Nous Research's Hermes 2 model with strong instruction following.",
+      "categories": ["chat"],
+      "tags": ["10.7b", "34b", "10.7b-solar-q4_K_M"],
+      "default_tag": "10.7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/nous-hermes2"
+    },
+    {
+      "name": "wizardlm2",
+      "description": "Microsoft's WizardLM 2 with improved complex instruction following.",
+      "categories": ["chat"],
+      "tags": ["7b", "8x22b", "7b-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/wizardlm2"
+    },
+    {
+      "name": "deepseek-v2",
+      "description": "DeepSeek's efficient mixture-of-experts model with strong general capabilities.",
+      "categories": ["chat"],
+      "tags": ["16b", "236b", "16b-lite-chat-q4_K_M"],
+      "default_tag": "16b",
+      "size_category": "large",
+      "url": "https://ollama.com/library/deepseek-v2"
+    },
+    {
+      "name": "dolphin-phi",
+      "description": "Uncensored Dolphin fine-tune of Microsoft Phi for compact unrestricted chat.",
+      "categories": ["chat"],
+      "tags": ["2.7b", "2.7b-v2.6-q4_K_M"],
+      "default_tag": "2.7b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/dolphin-phi"
+    },
+    {
+      "name": "llama2",
+      "description": "Meta's Llama 2 foundational model for general-purpose text generation.",
+      "categories": ["chat"],
+      "tags": ["7b", "13b", "70b", "7b-chat-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/llama2"
+    },
+    {
+      "name": "falcon2",
+      "description": "Technology Innovation Institute's Falcon 2 model with strong reasoning.",
+      "categories": ["chat"],
+      "tags": ["11b", "11b-q4_K_M"],
+      "default_tag": "11b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/falcon2"
+    },
+    {
+      "name": "internlm2",
+      "description": "Shanghai AI Lab's InternLM2 model with strong tool-use and reasoning.",
+      "categories": ["chat"],
+      "tags": ["1.8b", "7b", "20b"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/internlm2"
+    },
+    {
+      "name": "llava-phi3",
+      "description": "Lightweight vision-language model combining LLaVA with Microsoft Phi-3.",
+      "categories": ["chat", "vision"],
+      "tags": ["3.8b", "3.8b-mini-q4_K_M"],
+      "default_tag": "3.8b",
+      "size_category": "small",
+      "url": "https://ollama.com/library/llava-phi3"
+    },
+    {
+      "name": "wizard-vicuna-uncensored",
+      "description": "Uncensored Wizard Vicuna model for unrestricted conversations.",
+      "categories": ["chat"],
+      "tags": ["7b", "13b", "30b", "7b-q4_K_M"],
+      "default_tag": "7b",
+      "size_category": "medium",
+      "url": "https://ollama.com/library/wizard-vicuna-uncensored"
+    }
+  ]
+}
