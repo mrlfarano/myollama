@@ -1,0 +1,46 @@
+name: "\U0001F4A1 Feature Request"
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make MyOllama better? We'd love to hear it!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What problem does this solve? Why do you want this feature?
+      placeholder: I often need to compare outputs from two models side by side...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How do you envision this working?
+      placeholder: A split-view mode that sends the same prompt to two models simultaneously...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered any alternative approaches?
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Model Library
+        - Installed Models
+        - Modelfile Editor
+        - Settings
+        - Chat / Inference
+        - Monitoring
+        - CLI
+        - Other

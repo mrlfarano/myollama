@@ -1,0 +1,74 @@
+name: "\U0001F41B Bug Report"
+description: Report a bug or unexpected behavior
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the details below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear description of what the bug is.
+      placeholder: When I click "Pull Model" on the library page, nothing happens...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Go to the Library page
+        2. Click on a model card
+        3. Click "Pull"
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: input
+    id: myollama-version
+    attributes:
+      label: MyOllama version
+      placeholder: 0.1.0
+
+  - type: input
+    id: ollama-version
+    attributes:
+      label: Ollama version
+      placeholder: 0.9.0
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Docker
+        - Other
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: 20.x
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Paste any relevant logs or screenshots.
+      render: shell
