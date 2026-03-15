@@ -15,7 +15,7 @@ const eslintConfig = defineConfig([
   ]),
   // bin/cli.js is a CommonJS entrypoint — allow require() imports.
   {
-    files: ["bin/**/*.js"],
+    files: ["bin/**/*.js", "scripts/**/*.js"],
     rules: {
       "@typescript-eslint/no-require-imports": "off",
     },
