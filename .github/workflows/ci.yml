@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [main]
 
-env:
-  # Skip platform-specific optional deps that are only needed on Windows
-  npm_config_omit_optional: true
-
 jobs:
   lint-and-typecheck:
     name: Lint & Type Check
@@ -20,7 +16,8 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install --no-optional
+      # --force skips platform checks for Windows-only dev bindings (rolldown)
+      - run: npm ci --force
       - run: npm run lint
       - run: npx tsc --noEmit
 
@@ -33,7 +30,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install --no-optional
+      - run: npm ci --force
       - run: npm run test
 
   build:
@@ -45,5 +42,5 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install --no-optional
+      - run: npm ci --force
       - run: npm run build
