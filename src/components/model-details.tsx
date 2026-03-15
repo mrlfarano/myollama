@@ -15,8 +15,7 @@ export function ModelDetails({ modelName }: ModelDetailsProps) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
+    let cancelled = false;
 
     fetch("/api/ollama/show", {
       method: "POST",
@@ -28,13 +27,24 @@ export function ModelDetails({ modelName }: ModelDetailsProps) {
         return res.json();
       })
       .then((json: OllamaShowResponse) => {
-        setData(json);
-        setLoading(false);
+        if (!cancelled) {
+          setData(json);
+          setLoading(false);
+        }
       })
       .catch((err) => {
-        setError(err instanceof Error ? err.message : "Unknown error");
-        setLoading(false);
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : "Unknown error");
+          setLoading(false);
+        }
       });
+
+    return () => {
+      cancelled = true;
+      setData(null);
+      setLoading(true);
+      setError(null);
+    };
   }, [modelName]);
 
   if (loading) {

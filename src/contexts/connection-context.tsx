@@ -34,9 +34,19 @@ export function ConnectionProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    refresh();
+    // Use a local async wrapper to avoid calling setState synchronously
+    // in the effect body (the initial state of "checking" covers the first render).
+    let cancelled = false;
+    const run = async () => {
+      if (cancelled) return;
+      await refresh();
+    };
+    run();
     const interval = setInterval(refresh, 30000);
-    return () => clearInterval(interval);
+    return () => {
+      cancelled = true;
+      clearInterval(interval);
+    };
   }, [refresh]);
 
   return (
