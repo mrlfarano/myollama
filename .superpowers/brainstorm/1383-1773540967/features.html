@@ -1,0 +1,116 @@
+<h2>MyOllama — Feature Scope</h2>
+<p class="subtitle">Click to select features for v1. Unselected features move to "later".</p>
+
+<h3>Model Management</h3>
+<div class="options" data-multiselect>
+  <div class="option" data-choice="model-library" onclick="toggleSelect(this)">
+    <div class="letter">1</div>
+    <div class="content">
+      <h3>Model Library Browser</h3>
+      <p>Browse available models from the Ollama registry, search, filter by size/family/quantization, and pull new models with progress tracking.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="installed-models" onclick="toggleSelect(this)">
+    <div class="letter">2</div>
+    <div class="content">
+      <h3>Installed Models Dashboard</h3>
+      <p>View all installed models with size, family, quantization, parameter count, last used date. Delete, duplicate, or update models.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="modelfile-editor" onclick="toggleSelect(this)">
+    <div class="letter">3</div>
+    <div class="content">
+      <h3>Modelfile Editor</h3>
+      <p>Create and edit Modelfiles visually — set system prompts, parameters, template overrides. Build custom model variants.</p>
+    </div>
+  </div>
+</div>
+
+<h3>Inference & Chat</h3>
+<div class="options" data-multiselect>
+  <div class="option" data-choice="chat-playground" onclick="toggleSelect(this)">
+    <div class="letter">4</div>
+    <div class="content">
+      <h3>Chat Playground</h3>
+      <p>Full chat interface with streaming responses, conversation history, model switching mid-conversation, and markdown rendering.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="parameter-tuning" onclick="toggleSelect(this)">
+    <div class="letter">5</div>
+    <div class="content">
+      <h3>Parameter Tuning Panel</h3>
+      <p>Adjust temperature, top_p, top_k, repeat penalty, context window size, and other inference parameters with real-time sliders.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="model-comparison" onclick="toggleSelect(this)">
+    <div class="letter">6</div>
+    <div class="content">
+      <h3>Side-by-Side Model Comparison</h3>
+      <p>Send the same prompt to 2+ models simultaneously, compare outputs, response times, and token usage side by side.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="prompt-templates" onclick="toggleSelect(this)">
+    <div class="letter">7</div>
+    <div class="content">
+      <h3>Prompt Templates & Library</h3>
+      <p>Save, organize, and reuse system prompts and prompt templates. Share across conversations.</p>
+    </div>
+  </div>
+</div>
+
+<h3>Monitoring & System</h3>
+<div class="options" data-multiselect>
+  <div class="option" data-choice="resource-monitor" onclick="toggleSelect(this)">
+    <div class="letter">8</div>
+    <div class="content">
+      <h3>Resource Monitor</h3>
+      <p>Live GPU/CPU/RAM usage, VRAM allocation per model, inference speed (tokens/sec), and system health dashboard.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="request-logs" onclick="toggleSelect(this)">
+    <div class="letter">9</div>
+    <div class="content">
+      <h3>Request Logs & History</h3>
+      <p>Log all API requests with timing, token counts, parameters used. Filter, search, and replay past requests.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="multi-endpoint" onclick="toggleSelect(this)">
+    <div class="letter">10</div>
+    <div class="content">
+      <h3>Multi-Endpoint Switching</h3>
+      <p>Save multiple Ollama server URLs (e.g., Orin, desktop, cloud) and switch between them from a dropdown. Health check indicators.</p>
+    </div>
+  </div>
+</div>
+
+<h3>Advanced</h3>
+<div class="options" data-multiselect>
+  <div class="option" data-choice="api-explorer" onclick="toggleSelect(this)">
+    <div class="letter">11</div>
+    <div class="content">
+      <h3>API Explorer / Docs</h3>
+      <p>Interactive API documentation — test Ollama endpoints directly, see request/response schemas, generate code snippets for curl/Python/JS.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="embedding-tools" onclick="toggleSelect(this)">
+    <div class="letter">12</div>
+    <div class="content">
+      <h3>Embedding Tools</h3>
+      <p>Generate and visualize embeddings, test similarity search, manage embedding models separately from chat models.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="vision-support" onclick="toggleSelect(this)">
+    <div class="letter">13</div>
+    <div class="content">
+      <h3>Vision / Multimodal Support</h3>
+      <p>Upload images to vision-capable models (LLaVA, etc.), drag-and-drop image input in the chat interface.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="batch-inference" onclick="toggleSelect(this)">
+    <div class="letter">14</div>
+    <div class="content">
+      <h3>Batch Inference</h3>
+      <p>Run a prompt against multiple inputs (CSV/JSON), collect results in a table. Useful for evaluation and data processing.</p>
+    </div>
+  </div>
+</div>
