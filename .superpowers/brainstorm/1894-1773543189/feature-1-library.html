@@ -1,0 +1,133 @@
+<h2>Feature 1: Model Library Browser</h2>
+<p class="subtitle">Search, discover, and download Ollama models</p>
+
+<div class="mockup">
+  <div class="mockup-header">Model Library — Wireframe</div>
+  <div class="mockup-body" style="padding: 0; background: #0a0a0a;">
+
+    <!-- Top bar -->
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid #222;">
+      <div style="font-weight: bold; color: #e5e5e5; font-size: 1.1rem;">Model Library</div>
+      <div style="flex: 1;"></div>
+      <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 0.5rem 1rem; color: #888; min-width: 300px; font-size: 0.85rem;">
+        🔍 Search models (e.g., "llama3", "code", "vision")...
+      </div>
+    </div>
+
+    <!-- Filter pills -->
+    <div style="display: flex; gap: 0.5rem; padding: 0.8rem 1.5rem; border-bottom: 1px solid #1a1a1a; flex-wrap: wrap;">
+      <span style="background: #a78bfa; color: #000; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem; font-weight: 600;">All</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Chat</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Code</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Vision</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Embedding</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Small (&lt;4B)</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Medium (4-13B)</span>
+      <span style="background: #1a1a1a; color: #999; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem;">Large (13B+)</span>
+    </div>
+
+    <!-- Model cards grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; padding: 1.5rem;">
+
+      <!-- Card 1 -->
+      <div style="background: #111; border: 1px solid #222; border-radius: 10px; padding: 1.2rem; transition: border-color 0.2s;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+          <div style="font-weight: 600; color: #e5e5e5; font-size: 1rem;">llama3.3</div>
+          <span style="background: #34d39933; color: #34d399; padding: 0.15rem 0.5rem; border-radius: 8px; font-size: 0.7rem;">Installed</span>
+        </div>
+        <div style="color: #888; font-size: 0.8rem; margin-bottom: 0.8rem; line-height: 1.4;">Meta's latest Llama model. Strong general-purpose performance with improved reasoning.</div>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.8rem; flex-wrap: wrap;">
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">70B</span>
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">Q4_K_M</span>
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">42 GB</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button style="flex: 1; background: #1a1a1a; border: 1px solid #333; color: #999; padding: 0.4rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">View Tags</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="background: #111; border: 1px solid #222; border-radius: 10px; padding: 1.2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+          <div style="font-weight: 600; color: #e5e5e5; font-size: 1rem;">qwen3</div>
+        </div>
+        <div style="color: #888; font-size: 0.8rem; margin-bottom: 0.8rem; line-height: 1.4;">Alibaba's Qwen3 series. Excellent multilingual support with strong coding abilities.</div>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.8rem; flex-wrap: wrap;">
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">0.6B–235B</span>
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">Chat / Code</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button style="flex: 1; background: #a78bfa; border: none; color: #000; padding: 0.4rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer; font-weight: 600;">Pull Model</button>
+          <button style="flex: 0; background: #1a1a1a; border: 1px solid #333; color: #999; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Tags</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="background: #111; border: 1px solid #222; border-radius: 10px; padding: 1.2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+          <div style="font-weight: 600; color: #e5e5e5; font-size: 1rem;">deepseek-r1</div>
+        </div>
+        <div style="color: #888; font-size: 0.8rem; margin-bottom: 0.8rem; line-height: 1.4;">DeepSeek's reasoning model. Strong at math, logic, and step-by-step problem solving.</div>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.8rem; flex-wrap: wrap;">
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">1.5B–671B</span>
+          <span style="color: #666; font-size: 0.7rem; background: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 4px;">Reasoning</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button style="flex: 1; background: #a78bfa; border: none; color: #000; padding: 0.4rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer; font-weight: 600;">Pull Model</button>
+          <button style="flex: 0; background: #1a1a1a; border: 1px solid #333; color: #999; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Tags</button>
+        </div>
+      </div>
+
+      <!-- Card 4 - pulling state -->
+      <div style="background: #111; border: 1px solid #a78bfa44; border-radius: 10px; padding: 1.2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+          <div style="font-weight: 600; color: #e5e5e5; font-size: 1rem;">gemma3</div>
+          <span style="background: #a78bfa33; color: #a78bfa; padding: 0.15rem 0.5rem; border-radius: 8px; font-size: 0.7rem;">Pulling...</span>
+        </div>
+        <div style="color: #888; font-size: 0.8rem; margin-bottom: 0.8rem; line-height: 1.4;">Google's Gemma 3. Lightweight and efficient with good instruction following.</div>
+        <div style="margin-bottom: 0.5rem;">
+          <div style="background: #1a1a1a; border-radius: 4px; height: 6px; overflow: hidden;">
+            <div style="background: #a78bfa; height: 100%; width: 65%; border-radius: 4px; transition: width 0.3s;"></div>
+          </div>
+        </div>
+        <div style="color: #666; font-size: 0.7rem;">2.1 GB / 3.2 GB — 65%</div>
+      </div>
+
+    </div>
+
+    <!-- Manual pull bar at bottom -->
+    <div style="padding: 1rem 1.5rem; border-top: 1px solid #222; display: flex; gap: 0.5rem; align-items: center;">
+      <div style="color: #888; font-size: 0.8rem; white-space: nowrap;">Pull by name:</div>
+      <div style="flex: 1; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 0.5rem 1rem; color: #666; font-size: 0.85rem;">
+        e.g., mistral:7b-instruct-q4_K_M
+      </div>
+      <button style="background: #a78bfa; border: none; color: #000; padding: 0.5rem 1.2rem; border-radius: 8px; font-size: 0.85rem; cursor: pointer; font-weight: 600;">Pull</button>
+    </div>
+
+  </div>
+</div>
+
+<h3 style="margin-top: 1.5rem;">How It Works</h3>
+<div class="options">
+  <div class="option" style="cursor: default;">
+    <div class="letter" style="background: #a78bfa;">1</div>
+    <div class="content">
+      <h3>Curated Catalog + Search</h3>
+      <p>A bundled JSON catalog of ~50 popular models with descriptions, tags, and size ranges. Search filters against this catalog. The "Pull by name" bar at the bottom handles anything not in the catalog.</p>
+    </div>
+  </div>
+  <div class="option" style="cursor: default;">
+    <div class="letter" style="background: #60a5fa;">2</div>
+    <div class="content">
+      <h3>Tag Selection</h3>
+      <p>Clicking "Tags" or "Pull Model" expands to show available tags/quantizations (e.g., :4b, :1.7b, :latest, :q4_K_M). User picks the specific variant to pull.</p>
+    </div>
+  </div>
+  <div class="option" style="cursor: default;">
+    <div class="letter" style="background: #34d399;">3</div>
+    <div class="content">
+      <h3>Live Pull Progress</h3>
+      <p>Model downloads stream progress via the Ollama /api/pull endpoint (SSE). Progress bar, speed, and ETA shown on the card. Multiple concurrent pulls supported.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<h2>MyOllama — Architecture Overview</h2>
+<p class="subtitle">Monolithic Next.js app with Ollama proxy layer</p>
+
+<div class="mockup">
+  <div class="mockup-header">System Architecture</div>
+  <div class="mockup-body" style="padding: 2rem; font-family: monospace; font-size: 0.85rem; line-height: 1.8;">
+    <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
+
+      <!-- Browser -->
+      <div style="border: 2px solid #60a5fa; border-radius: 12px; padding: 1.2rem; min-width: 200px; text-align: center;">
+        <div style="color: #60a5fa; font-weight: bold; margin-bottom: 0.8rem; font-size: 1rem;">🌐 Browser</div>
+        <div style="background: rgba(96,165,250,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">Model Library Page</div>
+        <div style="background: rgba(96,165,250,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">Installed Models Page</div>
+        <div style="background: rgba(96,165,250,0.1); border-radius: 8px; padding: 0.6rem;">Modelfile Editor Page</div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="display: flex; align-items: center; padding-top: 3rem; color: #666;">
+        <span style="font-size: 1.5rem;">→</span>
+      </div>
+
+      <!-- Next.js Server -->
+      <div style="border: 2px solid #a78bfa; border-radius: 12px; padding: 1.2rem; min-width: 240px; text-align: center;">
+        <div style="color: #a78bfa; font-weight: bold; margin-bottom: 0.8rem; font-size: 1rem;">⚡ Next.js Server</div>
+        <div style="background: rgba(167,139,250,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">API Routes (Ollama Proxy)</div>
+        <div style="background: rgba(167,139,250,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">Catalog Service</div>
+        <div style="background: rgba(167,139,250,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">Settings Manager</div>
+        <div style="background: rgba(167,139,250,0.15); border-radius: 8px; padding: 0.6rem; border: 1px dashed rgba(167,139,250,0.3);">SQLite (settings, history)</div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="display: flex; align-items: center; padding-top: 3rem; color: #666;">
+        <span style="font-size: 1.5rem;">→</span>
+      </div>
+
+      <!-- Ollama -->
+      <div style="border: 2px solid #34d399; border-radius: 12px; padding: 1.2rem; min-width: 200px; text-align: center;">
+        <div style="color: #34d399; font-weight: bold; margin-bottom: 0.8rem; font-size: 1rem;">🦙 Ollama Server</div>
+        <div style="background: rgba(52,211,153,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">GET /api/tags</div>
+        <div style="background: rgba(52,211,153,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">POST /api/pull</div>
+        <div style="background: rgba(52,211,153,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">POST /api/show</div>
+        <div style="background: rgba(52,211,153,0.1); border-radius: 8px; padding: 0.6rem; margin-bottom: 0.5rem;">DELETE /api/delete</div>
+        <div style="background: rgba(52,211,153,0.1); border-radius: 8px; padding: 0.6rem;">POST /api/create</div>
+        <div style="color: #888; margin-top: 0.8rem; font-size: 0.8rem;">Configurable endpoint<br/>default: localhost:11434</div>
+      </div>
+    </div>
+
+    <!-- Data flow note -->
+    <div style="margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; text-align: center; color: #999; font-size: 0.8rem;">
+      Browser never talks to Ollama directly — all requests proxy through Next.js API routes.<br/>
+      This avoids CORS issues and enables request logging, caching, and error handling.
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top: 2rem;">Key Design Decisions</h3>
+<div class="options">
+  <div class="option" style="cursor: default;">
+    <div class="letter" style="background: #a78bfa;">P</div>
+    <div class="content">
+      <h3>Proxy Pattern</h3>
+      <p>All Ollama API calls go through Next.js API routes. The browser never hits Ollama directly. This solves CORS, enables logging, and lets us add caching or rate limiting later.</p>
+    </div>
+  </div>
+  <div class="option" style="cursor: default;">
+    <div class="letter" style="background: #60a5fa;">S</div>
+    <div class="content">
+      <h3>SQLite for State</h3>
+      <p>Settings (saved Ollama endpoints), pull history, and Modelfile drafts persist in a local SQLite database. Zero configuration, ships with the app.</p>
+    </div>
+  </div>
+  <div class="option" style="cursor: default;">
+    <div class="letter" style="background: #34d399;">E</div>
+    <div class="content">
+      <h3>Configurable Endpoint</h3>
+      <p>Ollama server URL is a setting, not hardcoded. Defaults to localhost:11434 but can point to any Ollama instance (e.g., 192.168.50.4:11434 for your Orin).</p>
+    </div>
+  </div>
+</div>
