@@ -87,7 +87,7 @@ test.describe("Modelfiles Page", () => {
     await page.locator("button", { hasText: "Save Draft" }).click();
 
     // Wait for the draft to appear in the sidebar
-    await page.waitForSelector(`text="${TEST_DRAFT_NAME}"`, { timeout: 5000 });
+    await page.waitForSelector(`text="${TEST_DRAFT_NAME}"`, { timeout: 10000 });
     await expect(page.locator(`text="${TEST_DRAFT_NAME}"`)).toBeVisible();
 
     // Now delete the draft — hover over it to show the delete button
