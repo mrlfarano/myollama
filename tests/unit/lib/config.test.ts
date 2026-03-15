@@ -253,9 +253,7 @@ describe("config", () => {
 
       const modelfiles = await getModelfiles();
       expect(modelfiles).toHaveLength(2);
-      const names = modelfiles.map(
-        (m: Record<string, unknown>) => m.name
-      );
+      const names = modelfiles.map((m) => m.name);
       expect(names).toContain("model-a");
       expect(names).toContain("model-b");
     });
